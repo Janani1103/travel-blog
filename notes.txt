@@ -1,0 +1,6 @@
+Travel Blog Notes:
+- Remember to update destinations regularly.
+- Add more travel photos for gallery.html.
+- Consider adding a map for each destination.
+- Check that all links between pages work properly.
+- Plan blog posts schedule: 1 post per week.

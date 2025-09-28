@@ -1,0 +1,274 @@
+<html>
+<head>
+    <title>Gallery - Sarah Johnson's Travel Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo::before {
+            content: "✈️";
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5em;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        main {
+            padding: 2em 0;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        .gallery-intro {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        
+        .gallery-intro h1 {
+            color: #2c3e50;
+            margin-bottom: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gallery-intro h1::before {
+            content: "🖼️";
+            margin-right: 10px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-content {
+            padding: 1.5em;
+        }
+        
+        .gallery-content h2 {
+            color: #2c3e50;
+            margin-bottom: 0.5em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .gallery-content h2::before {
+            content: "📍";
+            margin-right: 10px;
+        }
+        
+        .gallery-content p {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 2em;
+            color: #2c3e50;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2em;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .back-link::before {
+            content: "⬅️";
+            margin-right: 5px;
+        }
+        
+        .gallery-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            margin: 2em 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 1rem 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Wanderlust Diaries</div>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="gallery-intro">
+            <h1>Travel Gallery</h1>
+            <p>A visual journey through some of my most memorable travel moments</p>
+        </div>
+        
+        <div class="gallery-stats">
+            <div class="stat-item">
+                <span class="stat-number">24</span>
+                <span class="stat-label">Countries Visited</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">156</span>
+                <span class="stat-label">Photos Shared</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Continents Explored</span>
+            </div>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/Iceland.jpg" alt="Iceland Northern Lights" class="gallery-img">
+                <div class="gallery-content">
+                    <h2>Iceland</h2>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/peru.jpeg" alt="Machu Picchu, Peru" class="gallery-img">
+                <div class="gallery-content">
+                    <h2>Machu Picchu, Peru</h2>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/turkey.jpeg" alt="Cappadocia, Turkey" class="gallery-img">
+                <div class="gallery-content">
+                    <h2>Cappadocia, Turkey</h2>
+                    <p>Floating above Cappadocia's surreal landscape in a hot air balloon was like entering a fairytale. The unique rock formations, cave dwellings, and panoramic views created a magical morning I'll never forget.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="destinations.html" class="back-link">Read my travel stories</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Sarah Johnson's Travel Blog. All rights reserved. | ✈️ Travel More, Worry Less 🌍</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<html>
+<head>
+    <title>Travel Blog - About</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1em 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo::before {
+            content: "✈️";
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5em;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        main {
+            padding: 2em 0;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            margin-top: 2em;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2em;
+            align-items: start;
+        }
+        
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .profile-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.02);
+        }
+        
+        .about-content h1 {
+            color: #2c3e50;
+            margin-bottom: 1em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .about-content h1::before {
+            content: "👋";
+            margin-right: 10px;
+        }
+        
+        .section {
+            margin-bottom: 2em;
+            background: white;
+            padding: 1.5em;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 1em;
+            border-left: 4px solid #3498db;
+            padding-left: 0.5em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section.about h2::before {
+            content: "🧳";
+            margin-right: 10px;
+        }
+        
+        .section.interests h2::before {
+            content: "❤️";
+            margin-right: 10px;
+        }
+        
+        .section.contact h2::before {
+            content: "📞";
+            margin-right: 10px;
+        }
+        
+        .interests-list {
+            list-style-type: none;
+        }
+        
+        .interests-list li {
+            padding: 0.5em 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .interests-list li:before {
+            content: "✈️";
+            margin-right: 0.5em;
+            font-size: 1.2em;
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, #f1f8ff, #e3f2fd);
+            padding: 1.5em;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            padding: 0.8em;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .contact-icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .contact-details {
+            flex: 1;
+        }
+        
+        .contact-details strong {
+            display: block;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .contact-details a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .contact-details a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 1em;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .back-link::before {
+            content: "⬅️";
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Wanderlust Diaries</div>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-title">
+            <h1>About the Traveler</h1>
+            <p>Get to know me, my travel philosophy, and what inspires my wanderlust</p>
+        </div>
+        
+        <div class="about-container">
+            <div>
+                <img src="images/profile.jpeg" alt="Sarah Johnson" class="profile-img">
+            </div>
+            <div class="about-content">
+                <h1>About Sarah Johnson</h1>
+                
+                <div class="section about">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm Sarah Johnson, a passionate traveler and storyteller. My journey began five years ago when I took a solo trip to Southeast Asia and discovered my love for exploring new cultures and connecting with people from different backgrounds. Since then, I've visited over 30 countries across 5 continents, each destination leaving a unique imprint on my soul.</p>
+                    <p>I believe that travel is the best education one can receive. It teaches humility, adaptability, and opens our minds to different ways of living. Through this blog, I hope to inspire others to step out of their comfort zones and discover the beauty our world has to offer.</p>
+                </div>
+                
+                <div class="section interests">
+                    <h2>Travel Interests</h2>
+                    <ul class="interests-list">
+                        <li>Cultural immersion and local experiences</li>
+                        <li>Adventure travel and outdoor activities</li>
+                        <li>Historical sites and architectural wonders</li>
+                        <li>Culinary exploration and food tours</li>
+                        <li>Sustainable and responsible tourism</li>
+                    </ul>
+                </div>
+                
+                <div class="section contact">
+                    <h2>Contact Information</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <strong>Email</strong>
+                                <a href="mailto:sarahjohnson@gmailcom">sarah.johnson@example.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <strong>Phone</strong>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📸</div>
+                            <div class="contact-details">
+                                <strong>Instagram</strong>
+                                <a href="https://instagram.com/sarahwanders" target="_blank">@sarahwanders</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🐦</div>
+                            <div class="contact-details">
+                                <strong>Twitter</strong>
+                                <a href="https://twitter.com/sarah_travels" target="_blank">@sarah_travels</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🎥</div>
+                            <div class="contact-details">
+                                <strong>YouTube</strong>
+                                <a href="https://youtube.com/sarahstraveldiaries" target="_blank">Sarah's Travel Diaries</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <strong>LinkedIn</strong>
+                                <a href="https://linkedin.com/in/sarahjohnson" target="_blank">Sarah Johnson</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="destinations.html" class="back-link">Explore my travel destinations</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Sarah Johnson's Travel Blog. All rights reserved. | ✈️ Travel More, Worry Less 🌍</p>
+        </div>
+    </footer>
+</body>
+</html>

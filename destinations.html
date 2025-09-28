@@ -1,0 +1,270 @@
+<html>
+<head>
+    <title>Travel Blog - Destinations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1em 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo::before {
+            content: "✈️";
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5em;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        main {
+            padding: 2em 0;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            margin-top: 2em;
+        }
+        .destinations-intro {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        
+        .destinations-intro h1 {
+            color: #2c3e50;
+            margin-bottom: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .destinations-intro h1::before {
+            content: "🌍";
+            margin-right: 10px;
+        }
+        
+        .destinations-grid {
+            display: grid;
+            gap: 2em;
+        }
+        
+        .destination-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .destination-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .destination-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .destination-card:hover .destination-img {
+            transform: scale(1.05);
+        }
+        
+        .destination-content {
+            padding: 1.5em;
+        }
+        
+        .destination-content h2 {
+            color: #2c3e50;
+            margin-bottom: 0.5em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .destination-content h2::before {
+            content: "📍";
+            margin-right: 10px;
+        }
+        
+        .destination-content p {
+            margin-bottom: 1em;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .highlights-list {
+            list-style-type: none;
+        }
+        
+        .highlights-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .highlights-list li:before {
+            content: "✅";
+            margin-right: 0.5em;
+            font-size: 1.1em;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 2em;
+            color: #2c3e50;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2em;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .back-link::before {
+            content: "⬅️";
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Wanderlust Diaries</div>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="destinations-intro">
+            <h1>My Travel Stories</h1>
+            <p>From bustling cities to serene landscapes, each destination has a story to tell. Here are some of my favorite travel experiences.</p>
+        </div>
+        
+        <div class="destinations-grid">
+            <div class="destination-card">
+                <img src="images/kyoto.jpg" alt="Kyoto, Japan" class="destination-img">
+                <div class="destination-content">
+                    <h2>Kyoto, Japan</h2>
+                    <p>Kyoto is a city where ancient traditions harmoniously coexist with modern life. With its stunning temples, serene gardens, and geisha districts, it offers a glimpse into Japan's rich cultural heritage.</p>
+                    <h3>Highlights & Activities</h3>
+                    <ul class="highlights-list">
+                        <li>Visiting Fushimi Inari Shrine with its thousands of torii gates</li>
+                        <li>Experiencing a traditional tea ceremony</li>
+                        <li>Exploring the bamboo forests of Arashiyama</li>
+                        <li>Strolling through Gion district in the evening</li>
+                        <li>Admiring the golden pavilion at Kinkaku-ji Temple</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="destination-card">
+                <img src="images/santorini.jpeg" alt="Santorini, Greece" class="destination-img">
+                <div class="destination-content">
+                    <h2>Santorini, Greece</h2>
+                    <p>Famous for its white-washed buildings, blue-domed churches, and breathtaking sunsets, Santorini is a dream destination in the Aegean Sea. The island's volcanic landscape creates a unique and dramatic setting.</p>
+                    <h3>Highlights & Activities</h3>
+                    <ul class="highlights-list">
+                        <li>Watching the sunset from Oia village</li>
+                        <li>Exploring the ancient ruins of Akrotiri</li>
+                        <li>Swimming in the hot springs of the caldera</li>
+                        <li>Wine tasting at local vineyards</li>
+                        <li>Hiking from Fira to Oia along the caldera edge</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="destination-card">
+                <img src="images/patagonia.jpg" alt="Patagonia, Chile/Argentina" class="destination-img">
+                <div class="destination-content">
+                    <h2>Patagonia, Chile/Argentina</h2>
+                    <p>Patagonia is a vast wilderness at the southern tip of South America, known for its dramatic landscapes, towering mountains, and pristine glaciers. It's a paradise for nature lovers and adventure seekers.</p>
+                    <h3>Highlights & Activities</h3>
+                    <ul class="highlights-list">
+                        <li>Trekking in Torres del Paine National Park</li>
+                        <li>Witnessing the Perito Moreno Glacier</li>
+                        <li>Wildlife watching (penguins, guanacos, condors)</li>
+                        <li>Hiking to the base of Mount Fitz Roy</li>
+                        <li>Exploring the remote Tierra del Fuego</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="about.html" class="back-link">Learn more about the traveler</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Sarah Johnson's Travel Blog. All rights reserved. | ✈️ Travel More, Worry Less 🌍</p>
+        </div>
+    </footer>
+</body>
+</html>
